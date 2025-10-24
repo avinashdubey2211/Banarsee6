@@ -1,7 +1,12 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; 
+
 
 const AffordableSarees = () => {
+          const navigate = useNavigate(); 
+  
+  
   const products = [
     {
       name: "Banarasee organza floral embroidery sequin work saree red",
@@ -82,7 +87,10 @@ const AffordableSarees = () => {
       </div>
 
       <div className="flex justify-center mt-8 sm:mt-10">
-        <button className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
+        <button 
+                         onClick={() => navigate("/productspage")} 
+
+        className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
           View All
         </button>
       </div>

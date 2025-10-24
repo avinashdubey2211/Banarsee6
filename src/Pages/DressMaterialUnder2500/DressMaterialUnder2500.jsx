@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 
 const DressMaterialUnder2500 = () => {
+         const navigate = useNavigate(); 
+  
   const products = [
     {
       name: "Banarasee cotton silk salwar kameez fabric with dupatta set resham work green",
@@ -81,7 +84,10 @@ const DressMaterialUnder2500 = () => {
 
       {/* View All Button */}
       <div className="flex justify-center mt-8 sm:mt-10">
-        <button className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
+        <button 
+                         onClick={() => navigate("/productspage")} 
+
+         className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
           View All
         </button>
       </div>

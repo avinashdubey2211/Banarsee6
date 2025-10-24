@@ -1,5 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; 
+
+
 
 const products = [
   {
@@ -41,6 +44,8 @@ const products = [
 ];
 
 const EternalBanaraseeStyles = () => {
+          const navigate = useNavigate(); 
+
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 py-12 bg-gray-50">
       {/* Title */}
@@ -97,7 +102,10 @@ const EternalBanaraseeStyles = () => {
 
       {/* View All Button */}
       <div className="flex justify-center mt-8 sm:mt-10">
-        <button className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
+        <button 
+           onClick={() => navigate("/productspage")} 
+
+        className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
           View All
         </button>
       </div>

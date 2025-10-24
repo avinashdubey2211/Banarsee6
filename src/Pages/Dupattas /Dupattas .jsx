@@ -1,8 +1,12 @@
  
 
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
+
 
 const Dupattas = () => {
+        const navigate = useNavigate(); 
+
   const products = [
     {
       name: "Banarasee art silk dupatta with hand embroidered motifs brown 1",
@@ -84,7 +88,10 @@ const Dupattas = () => {
 
       {/* View All Button */}
       <div className="flex justify-center mt-8 sm:mt-10">
-        <button className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
+        <button 
+                         onClick={() => navigate("/productspage")} 
+
+         className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800 transition text-sm sm:text-base">
           View All
         </button>
       </div>
