@@ -6,36 +6,31 @@ const products = [
     name: "Banarasee Handwoven Broad Border Zari Jaal Design Tissue Saree Blue Pink",
       price: "₹6,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_7096_0be3f13d-aa60-4bbc-a23b-f027021ebf56.jpg?v=1703504409",
-    hoverImg:
-      "https://www.banarasee.in/cdn/shop/files/IMG_71081.jpg?v=1703504442",
+    hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_71081.jpg?v=1703504442",
   },
   {
     name: "Banarasee Handwoven Broad Border Tissue Saree With Embroidered Floral Buta Pink",
       price: "₹7,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_6877.jpg?v=1698917686",
-    hoverImg:
-      "https://www.banarasee.in/cdn/shop/files/IMG_2307.jpg?v=1706013439",
+    hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_2307.jpg?v=1706013439",
   },
   {
     name: "Handloom MulM Cotton Hand Block Print Saree Black White",
       price: "₹5,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0151.jpg?v=1711540907",
-    hoverImg:
-      "https://www.banarasee.in/cdn/shop/files/IMG_0145.jpg?v=1711540907",
+    hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0145.jpg?v=1711540907",
   },
   {
     name: "Banarasee Semi Chiffon Saree With Antique Gold Zari Work Maroon",
       price: "₹8,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3598_1400x.jpg?v=1690611586",
-    hoverImg:
-      "https://www.banarasee.in/cdn/shop/files/IMG_3603_b0b4aaa1-dce3-4790-8820-187d0cf3ca8a_1400x.jpg?v=1690611598",
+    hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_3603_b0b4aaa1-dce3-4790-8820-187d0cf3ca8a_1400x.jpg?v=1690611598",
   },
   {
     name: "Banarasee Handwoven Plain Tissue Skirt Border Saree Grey",
       price: "₹7,999",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3260_1400x.jpg?v=1690955457",
-    hoverImg:
-      "https://www.banarasee.in/cdn/shop/files/IMG_3266_1400x.jpg?v=1690955457",
+    hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_3266_1400x.jpg?v=1690955457",
   },
 ];
 
