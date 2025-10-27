@@ -11,30 +11,40 @@ const BestSellingDressMaterial = () => {
     {
       name: "Handloom khadi cotton hand dyed batik pattern salwar kameez dupatta set beige yellow",
       price: "₹6,499",
+                      path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/products/DSC_0885_47db8e91-9380-4ced-8d2a-c31c7980ec82_720x.jpg?v=1641557097",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/DSC_0886_b4de85a5-bc68-452a-b03d-f86230ae47f7_720x.jpg?v=1641557097",
     },
     {
       name: "Banarasee salwar kameez cotton silk resham buti woven fabric peach",
       price: "₹7,499",
+                      path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/files/IMG_0947_e2b783f3-264e-499c-8576-9c57bbc2ede5_720x.jpg?v=1690285987",
       hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_0948_995ecc3c-5f9e-41f9-a6a3-1d3676d71a5b_720x.jpg?v=1690285986",
     },
     {
       name: "Banarasee semi katan silk salwar kameez fabric with dupatta zari work grey",
       price: "₹5,499",
+                      path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/files/IMG_0268_720x.jpg?v=1712657574",
       hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0258_7f6dae99-c383-4fe5-8308-fb2ebc52c0b0_720x.jpg?v=1712657574",
     },
     {
       name: "Banarasee chanderi cotton stripes salwar kameez fabric with dupatta yellow",
       price: "₹8,499",
+                      path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/products/DSC_0340_4b558c0e-9865-4784-ad9d-9fc855c5b24f_600x.jpg?v=1631277555",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/DSC_0341_2209734f-abaf-40ae-a251-defed113be49_600x.jpg?v=1631277555",
     },
     {
       name: "banarasee chanderi cotton stripes salwar kameez fabric with dupatta pink",
       price: "₹7,999",
+                      path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/products/DSC_0326_0fc4d027-b663-46e2-96c2-190c2eaa8227_600x.jpg?v=1631277113",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/DSC_0327_deb916bd-13d0-41e7-abe7-f0ff63d16bad_600x.jpg?v=1631277113",
     },
@@ -55,7 +65,10 @@ const BestSellingDressMaterial = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <div key={idx}
+                                    onClick={() => product.path && navigate(product.path)} // ✅ move here
+
+           className="group cursor-pointer">
             <div className="relative w-full overflow-hidden rounded-lg">
               <img
                 src={product.img}

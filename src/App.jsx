@@ -6,6 +6,8 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from './Shared/Navbar/Navbar'
 import ProductsPage from "./Components/ProductsPage/ProductsPage";
+import Card_Detail from "./Components/Card_Detail/Card_Detail";
+import Login from "./Components/Login/Login";
 
 
 
@@ -29,6 +31,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Homes/>} />
         <Route path="/productspage" element={<ProductsPage/>} />
+        <Route path="/card_detail" element={<Card_Detail/>}/>
+                <Route path="/login" element={<Login/>}/>
+
        
 
 

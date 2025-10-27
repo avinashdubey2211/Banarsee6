@@ -1,18 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
+
 
 const OriginSarees = () => {
+                const navigate = useNavigate(); 
+  
   const collections = [
     {
       img: "https://www.banarasee.in/cdn/shop/files/IMG_9823.jpg?v=1706334567",
       title: "Cotton Silk Dress Material",
+                 path:"/productspage",
+
     },
     {
       img: "https://www.banarasee.in/cdn/shop/files/IMG_9129_e3e6ab11-177a-40cc-8b9e-3de5b1b0bc5a_360x.jpg?v=1701344923",
       title: "Chanderi Dress Material",
+                 path:"/productspage",
+
     },
     {
       img: "https://www.banarasee.in/cdn/shop/files/IMG_8618_360x.jpg?v=1697089636",
       title: "Katan Silk Dress Material",
+                 path:"/productspage",
+
     },
   ];
 
@@ -21,7 +31,8 @@ const OriginSarees = () => {
       {collections.map((item, index) => (
         <div
           key={index}
-          className="relative w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[520px] overflow-hidden rounded-2xl"
+            onClick={() => item.path && navigate(item.path)} // ✅ FIXED HERE
+           className="relative w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[520px] overflow-hidden rounded-2xl"
         >
           {/* Image */}
           <img

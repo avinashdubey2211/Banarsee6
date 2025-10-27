@@ -6,30 +6,40 @@ import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 const products = [
   {
     name: "Banarasee Handwoven Broad Border Zari Jaal Design Tissue Saree Blue Pink",
+            path:"/card_detail",
+
       price: "₹6,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_7096_0be3f13d-aa60-4bbc-a23b-f027021ebf56.jpg?v=1703504409",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_71081.jpg?v=1703504442",
   },
   {
     name: "Banarasee Handwoven Broad Border Tissue Saree With Embroidered Floral Buta Pink",
+            path:"/card_detail",
+
       price: "₹7,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_6877.jpg?v=1698917686",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_2307.jpg?v=1706013439",
   },
   {
     name: "Handloom MulM Cotton Hand Block Print Saree Black White",
+            path:"/card_detail",
+
       price: "₹5,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0151.jpg?v=1711540907",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0145.jpg?v=1711540907",
   },
   {
     name: "Banarasee Semi Chiffon Saree With Antique Gold Zari Work Maroon",
+            path:"/card_detail",
+
       price: "₹8,499",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3598_1400x.jpg?v=1690611586",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_3603_b0b4aaa1-dce3-4790-8820-187d0cf3ca8a_1400x.jpg?v=1690611598",
   },
   {
     name: "Banarasee Handwoven Plain Tissue Skirt Border Saree Grey",
+            path:"/card_detail",
+
       price: "₹7,999",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3260_1400x.jpg?v=1690955457",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_3266_1400x.jpg?v=1690955457",
@@ -54,7 +64,10 @@ const Best_Selling = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <div key={idx}
+                          onClick={() => product.path && navigate(product.path)} // ✅ move here
+
+           className="group cursor-pointer">
             <div className="relative w-full overflow-hidden rounded-lg">
               <img
                 src={product.img}

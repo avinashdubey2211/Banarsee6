@@ -358,26 +358,35 @@ import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 const products = [
   {
     name: "Hanarasee Handloom satin hand dyed saree with mirror work blush pink yellow",
+    path:"/card_detail",
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0580_c1c2a33b-2e91-432a-97a4-b457ec4688bd.jpg?v=1760868877",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0591_f644f953-084c-408d-a7e4-cf0b91defbbc.jpg?v=1760868877",
   },
   {
     name: "Banarasee Handloom Satin Hand dyed Saree With-mirror work yellow (dual-tone)",
+        path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0612_7f9543d0-ae1f-4e85-9dbc-2224490c344a.jpg?v=1760868369",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0615_bdaa58d1-3038-473b-8cfa-334edf62844d.jpg?v=1760868369",
   },
   {
     name: "Banarasee Handloom Satin Hand Dyed Saree With Mirror Work Light Yellow Light Blue",
+        path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0596_f470a765-82f3-43e3-adda-1690f82d629d.jpg?v=1760866225",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_0599_e9d5bae7-b68c-4285-a5e4-e096dc815db1.jpg?v=1760866225",
   },
   {
     name: "Banarasee Handloom Satin Hand Dyed Saree With Mirror Work Light Yellow Light Pink",
+        path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0624_5f791440-d158-430f-bffd-3a421fee8c19.jpg?v=1760864807",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0629_83518389-1da8-4d08-925e-3c019e0c7a82.jpg?v=1760864807",
   },
   {
     name: "Banarasee Handwoven Tissue Saree With Zari Thread Work Gold",
+        path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_0745_16c9ce45-7598-47f6-ae9a-4f1c3226a67b.jpg?v=1760863580",
     hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_0752_90f71c22-dd9c-4ef1-9161-5eb5e4a44afa.jpg?v=1760863580",
   },
@@ -401,12 +410,16 @@ const NewArrivals = () => {
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <div key={idx} 
+                onClick={() => product.path && navigate(product.path)} // ✅ move here
+
+          className="group cursor-pointer">
             <div className="relative w-full overflow-hidden rounded-lg">
               <img
                 src={product.img}
                 alt={product.name}
                 className="w-full h-[350px] object-cover transition-transform duration-500 group-hover:scale-105"
+
               />
               <img
                 src={product.hoverImg}

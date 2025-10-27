@@ -8,36 +8,48 @@ const products = [
   {
     name: "Banarasee organza mix saree with zari border pink ",
     price: "₹6,499",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_8216_687c436f-4131-46b0-a6b0-b1a22c6f2788_1400x.jpg?v=1697175584",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_8224_11344d89-73a0-4d90-9865-8e7b8dda1bbb_1400x.jpg?v=1697175625",
   },
   {
     name: "Banarasee salwar kameez semi katan silk fabric with zari work blue pink tone",
     price: "₹7,499",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_8652_2dd7b74a-bb61-400e-80d6-5774c9c81c46_1400x.jpg?v=1697090057",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_8654_1400x.jpg?v=1697090057",
   },
   {
     name: "Banarasee handwoven tissue= saree with swarovski work gold",
     price: "₹5,499",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_5152_1200x.jpg?v=1693986832",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_51457_1200x.jpg?v=1693986832",
   },
   {
     name: "Banarasee handwoven plain tissue skirt border saree grey",
     price: "₹8,499",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3266_1200x.jpg?v=1690955457",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_3260_1200x.jpg?v=1690955457",
   },
   {
     name: "Banarasee handwoven plain tissue skirt border saree pink",
     price: "₹7,999",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_2055_1200x.jpg?v=1690955017",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_2050_1200x.jpg?v=1690955017",
   },
   {
     name: "Banarasee organza mix saree with zari border pink",
     price: "₹7,999",
+                path:"/card_detail",
+
     img: "https://www.banarasee.in/cdn/shop/files/IMG_3691_1200x.jpg?v=1690878802",
     hoverImg: "https://www.banarasee.in/cdn/shop/files/IMG_8216_687c436f-4131-46b0-a6b0-b1a22c6f2788_1400x.jpg?v=1697175584",
   },
@@ -61,7 +73,10 @@ const EternalBanaraseeStyles = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
         {products.map((product, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <div key={idx}
+          onClick={() => product.path && navigate(product.path)} // ✅ move here
+
+           className="group cursor-pointer">
             <div className="relative w-full overflow-hidden rounded-lg">
               <img
                 src={product.img}

@@ -11,30 +11,40 @@ const Dupattas = () => {
     {
       name: "Banarasee art silk dupatta with hand embroidered motifs brown 1",
       price: "₹6,499",
+                            path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/files/IMG_1950_360x.jpg?v=1688795223",
       hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_1949_360x.jpg?v=1688795223",
     },
     {
       name: "Banarasee cotton silk gichha work dupatta brown ",
       price: "₹7,499",
+                            path:"/card_detail",
+
        img: "https://www.banarasee.in/cdn/shop/files/IMG_2012_360x.jpg?v=1688790104",
       hoverImg:"https://www.banarasee.in/cdn/shop/files/IMG_2014_360x.jpg?v=1688790104"
     },
     {
       name: "Art silk jaal design dupatta green 4",
       price: "₹5,499",
+                            path:"/card_detail",
+
        img: "https://www.banarasee.in/cdn/shop/products/DSC_0213_bbd11271-9f50-4f02-9f44-b620e2c6758d_360x.jpg?v=1679312561",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/DSC_0216_7749ff34-fff6-4e58-badb-ea7f11490728_360x.jpg?v=1679312561"
     },
     {
       name: "Banarasee pure desi tussar silk block print dupatta beige",
       price: "₹8,499",
+                            path:"/card_detail",
+
       img: "https://www.banarasee.in/cdn/shop/products/IMG_6259_360x.jpg?v=1678446614",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/IMG_6261_360x.jpg?v=1678446614"
     },
     {
       name: "Banarasee pure gajji silk patola design dupatta yellow",
       price: "₹7,999",
+                            path:"/card_detail",
+
        img: "https://www.banarasee.in/cdn/shop/products/DSC_0370_f2070717-a738-4679-820d-63be19581f68_360x.jpg?v=1671105076",
       hoverImg:"https://www.banarasee.in/cdn/shop/products/DSC_0367_b97e2583-b74d-4fac-9fac-1d33fef52c72_360x.jpg?v=1671105076"
     },
@@ -56,7 +66,10 @@ const Dupattas = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product, idx) => (
-          <div key={idx} className="group cursor-pointer">
+          <div key={idx}
+                    onClick={() => product.path && navigate(product.path)} // ✅ move here
+
+           className="group cursor-pointer">
             <div className="relative w-full overflow-hidden rounded-lg">
               <img
                 src={product.img}
