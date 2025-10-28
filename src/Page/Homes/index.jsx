@@ -19,12 +19,14 @@ import Dupattas from '../../Pages/Dupattas /Dupattas '
 import HeroBanner from '../../Pages/HeroBanner/HeroBanner'
 import AboutBanarasee from '../../Pages/AboutBanarasee/AboutBanarasee'
 import Fooder from '../../Shared/Fooder/Fooder'
+import Video from '../../Pages/Video/Video'
 
 const index = () => {
   return (
    <>
     <Home/>
     <NewArrivals/>
+    <Video/>
     <Best_Selling/>
     <Cutton_Silk_Sarees/>
     <Banner/>
